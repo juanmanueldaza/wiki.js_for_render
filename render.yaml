@@ -1,0 +1,11 @@
+services:
+  - name: wikijs
+    env:
+      DB_NAME: my_database_name
+      DB_HOST: my_database_host.render.com
+      DB_PORT: 5432
+      DB_USER: my_database_user
+      DB_PASS: my_database_password
+      DB_TYPE: postgres
+    buildCommand: docker build -t wikijs .
+    startCommand: docker run -p 3000:3000 -e PORT=3000 wikijs
