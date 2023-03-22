@@ -9,6 +9,8 @@ ARG db_user
 ENV DB_user=$db_user
 ARG db_pass
 ENV DB_PASS=$db_pass
+ARG db_type
+ENV DB_TYPE=$db_type
 # USER root
 # RUN apk add --update curl && \
 #     rm -rf /var/cache/apk/*
